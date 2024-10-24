@@ -1,10 +1,13 @@
-# Auto Login when pop-up appears from UGent
+# UGent Auto Login Extension
+![Extension icon](icons/icon.png)
 **Why does this exist?**  
 you reopen your browser and notice you have to log in to all [Ufora-related tabs](#auto-login-screens) again.  
 This automates clicking "login" on every [login screen](#auto-login-screens).
 
 **Table of Contents**
 * [Installation guide](#installation-guide)
+    + [Chrome](#chrome)
+    + [Firefox](#firefox)
 * [Auto login screens](#auto-login-screens)
 * [Manual exceptions](#manual-exceptions)
     + [Microsoft 2FA](#microsoft-2fa)
@@ -42,7 +45,7 @@ url: `https://elosp.ugent.be/*`
 
 **Microsoft**  
 url: `https://login.microsoftonline.com/*`  
-![microsoft choose account](images/microsoft_online_auto_login.png)
+![microsoft choose account](images/microsoft_online_auto_login.png)  
 The first account always gets chosen.
 
 
@@ -51,7 +54,8 @@ These are login screens that **cannot be automated**
 
 ### Microsoft 2FA
 Sometimes, after choosing your account, you'll have to use 2FA to log in again.  
-This is because your session token expired. That can't be automated. And has to be done every once in a while.  
+This is because your session token expired.  
+That can't be automated. And has to be done every once in a while.  
 ![Microsoft choose account login](images/microsoft_online_login.png)
 
 
