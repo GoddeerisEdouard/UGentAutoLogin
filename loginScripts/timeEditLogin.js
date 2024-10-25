@@ -1,4 +1,3 @@
-console.log("running time");
 const loginButton = document.querySelector('a[href*="sso/saml2_student"]');
 if (loginButton) {
   console.log("TimeEdit login button found, clicking...");

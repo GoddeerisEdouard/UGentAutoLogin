@@ -1,7 +1,7 @@
 # UGent Auto Login Extension
 ![Extension icon](icons/icon.png)  
 **Why does this exist?**  
-you reopen your browser and notice you have to log in to all [Ufora-related tabs](#auto-login-screens) again.  
+you reopen your browser and notice you have to log in to all Ugent-related tabs again.  
 This automates clicking "login" on every [login screen](#auto-login-screens).  
 This happens in the background, the extension **will not** move your mouse.
 
@@ -17,9 +17,9 @@ This happens in the background, the extension **will not** move your mouse.
 
 ## Installation guide
 Download as zip.  
-extract zip.
 
 ### Chrome
+extract zip.
 go to `chrome://extensions/` and make sure developer mode is enabled.  
 "load extracted extension" and select the folder.
 
@@ -34,7 +34,7 @@ This never expires.
 
 ## Auto login screens
 The login portals you'd see when you're logged out.  
-All these login buttons will automatically be pressed.  
+All these login buttons will automatically be clicked.  
 **TimeEdit**  
 url: `https://cloud.timeedit.net/*`  
 ![Login TimeEdit](images/timeEdit_login.png)
