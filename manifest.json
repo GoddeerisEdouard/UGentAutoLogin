@@ -3,12 +3,7 @@
   "author": "Edouard Goddeeris",
   "name": "Auto Login Extension",
   "version": "1.0.0",
-  "description": "Automatically clicks login buttons on TimeEdit UGent, Microsoft Online, and elosp UGent",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "ugent.autologin@example.com"
-    }
-  },
+  "description": "browser extension which automatically logs in UGent related login screens",
   "permissions": [
     "tabs",
     "https://cloud.timeedit.net/*",
