@@ -16,7 +16,7 @@ This happens in the background, the extension **will not** move your mouse.
 * [Bugs or Feature Requests](#bugs-or-feature-requests)
 
 ## Installation guide
-Download the latest zip from the [releases](https://github.com/GoddeerisEdouard/UGentAutoLogin/releases)
+Download the latest `UGentAutoLogin-vX.X.X.zip` from the [releases](https://github.com/GoddeerisEdouard/UGentAutoLogin/releases)
 
 ### Chrome
 extract zip.
@@ -29,7 +29,7 @@ And select the zip.
 
 Downside: This temporary extension expires in 24 hours...  
 
-Alternative: `<published firefox add-on link here>`  
+Alternative: `<link to self-hosted Firefox add-on here>`  
 This never expires.
 
 ## Auto login screens
