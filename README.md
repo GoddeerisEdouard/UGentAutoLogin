@@ -16,7 +16,7 @@ This happens in the background, the extension **will not** move your mouse.
 * [Bugs or Feature Requests](#bugs-or-feature-requests)
 
 ## Installation guide
-Download the latest zip from `/releases`  
+Download the latest zip from the [releases](https://github.com/GoddeerisEdouard/UGentAutoLogin/releases)
 
 ### Chrome
 extract zip.
