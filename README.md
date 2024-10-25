@@ -1,8 +1,9 @@
 # UGent Auto Login Extension
-![Extension icon](icons/icon.png)
+![Extension icon](icons/icon.png)  
 **Why does this exist?**  
 you reopen your browser and notice you have to log in to all [Ufora-related tabs](#auto-login-screens) again.  
-This automates clicking "login" on every [login screen](#auto-login-screens).
+This automates clicking "login" on every [login screen](#auto-login-screens).  
+This happens in the background, the extension **will not** move your mouse.
 
 **Table of Contents**
 * [Installation guide](#installation-guide)
