@@ -16,7 +16,7 @@ This happens in the background, the extension **will not** move your mouse.
 * [Bugs or Feature Requests](#bugs-or-feature-requests)
 
 ## Installation guide
-Download as zip.  
+Download the latest zip from `/releases`  
 
 ### Chrome
 extract zip.
