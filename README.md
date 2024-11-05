@@ -47,7 +47,7 @@ url: `https://elosp.ugent.be/*`
 **Microsoft**  
 url: `https://login.microsoftonline.com/*`  
 ![microsoft choose account](images/microsoft_online_auto_login.png)  
-The first account always gets chosen.
+The first `@ugent.be` account always gets chosen.
 
 
 ## Manual exceptions
