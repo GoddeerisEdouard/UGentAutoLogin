@@ -2,22 +2,23 @@ console.log("Waiting for Microsoft login button to appear...");
 
 // observe / wait for the login button to appear
 const observer = new MutationObserver(() => {
-  const loginButton = document.querySelector(
+  const loginButtons = document.querySelectorAll(
     "#tilesHolder > div.tile-container > div > div.table"
   );
-  if (
-    loginButton &&
-    loginButton.getAttribute("data-test-id").includes("@ugent.be")
-  ) {
-    console.log(
-      `Microsoft login button with UGent email (${loginButton.getAttribute(
-        "data-test-id"
-      )}) found, clicking...`
-    );
-    loginButton.click();
-    // stop observing after click
-    observer.disconnect();
-  }
+  loginButtons.forEach((loginButton) => {
+    if (
+      loginButton.getAttribute("data-test-id").includes("@ugent.be")
+    ) {
+      console.log(
+        `Microsoft login button with UGent email (${loginButton.getAttribute(
+          "data-test-id"
+        )}) found, clicking...`
+      );
+      loginButton.click();
+      // stop observing after click
+      observer.disconnect();
+    }
+  })
 });
 
 // start observing the body for added nodes (children)
