@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "author": "Edouard Goddeeris",
   "name": "Auto Login Extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "browser extension which automatically logs in UGent related login screens",
   "permissions": [
     "tabs",
