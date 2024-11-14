@@ -1,52 +1,34 @@
-// observe / wait for the login button to appear
-const observer = new MutationObserver(() => {
-  const loginButton = document.querySelector(
+const uGentAccountObserver = new MutationObserver(() => {
+  const uGentAccountElem = document.querySelector(
     '#tilesHolder > div.tile-container > div > div.table[data-test-id*="@ugent.be"]'
   );
-  if (loginButton) {
-    loginButton.click();
-    // stop observing after click
-    observer.disconnect();
-  }
+  if (!uGentAccountElem) return;
+
+  uGentAccountElem.click();
+  // stop observing after click
+  uGentAccountObserver.disconnect();
+
+  // observe next webElement which appears after the first UGent account is clicked
+  const passwordObserver = new MutationObserver(() => {
+    const passwordInput = document.querySelector('input[name="passwd"]');
+    // if passwordInput is autocompleted (value attribute isn't null)
+    if (passwordInput && passwordInput.value) {
+      passwordInput.dispatchEvent(
+        new KeyboardEvent("keydown", { key: "Enter" })
+      );
+      // stop observing
+      passwordObserver.disconnect();
+
+      // after the passwordInput has been filled in and Enter has been pressed, it's still possible 2FA is required afterwards, this can't be automated...
+    }
+  });
+
+  // start observing the body for added nodes to detect password input field
+  passwordObserver.observe(document.body, { childList: true, subtree: true });
 });
 
 // start observing the body for added nodes (children)
-observer.observe(document.body, { childList: true, subtree: true });
-
-// check for password input field
-const passwordObserver = new MutationObserver(() => {
-  const passwordInput = document.querySelector('input[name="passwd"]');
-  if (passwordInput && passwordInput.value) {
-    passwordInput.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter" }));
-    // stop observing
-    passwordObserver.disconnect();
-  }
+uGentAccountObserver.observe(document.body, {
+  childList: true,
+  subtree: true,
 });
-
-// start observing the body for added nodes to detect password input field
-passwordObserver.observe(document.body, { childList: true, subtree: true });
-
-// check for 2FA input field
-const otpInput = document.querySelector('input[name="otc"]');
-if (otpInput) {
-  // monitor for code verification by observing changes in the 2FA input field
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (otpInput.disabled || otpInput.hidden || otpInput.value.length === 6) {
-        const loginButton = document.querySelector(
-          "div.tile:nth-child(1) > div:nth-child(1)"
-        );
-        loginButton?.click();
-        // stop observing after verification
-        observer.disconnect();
-      }
-    });
-  });
-
-  // start observing for changes in the 2FA input field
-  observer.observe(otpInput, {
-    attributes: true,
-    childList: true,
-    subtree: true,
-  });
-}
