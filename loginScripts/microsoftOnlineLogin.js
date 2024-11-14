@@ -1,6 +1,6 @@
 // observe / wait for the login button to appear
 const observer = new MutationObserver(() => {
-  const loginButton = document.querySelectorAll(
+  const loginButton = document.querySelector(
     '#tilesHolder > div.tile-container > div > div.table[data-test-id*="@ugent.be"]'
   );
   if (loginButton) {
