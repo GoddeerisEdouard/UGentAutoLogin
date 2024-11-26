@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "author": "Edouard Goddeeris",
+  "name": "Auto Login Extension",
+  "version": "1.2.0",
+  "description": "browser extension which automatically logs in UGent related login screens",
+  "host_permissions": [
+    "https://cloud.timeedit.net/*",
+    "https://login.microsoftonline.com/*",
+    "https://elosp.ugent.be/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://cloud.timeedit.net/*"],
+      "js": ["src/loginScripts/timeEditLogin.js"]
+    },
+    {
+      "matches": ["https://login.microsoftonline.com/*"],
+      "exclude_matches": [
+        "https://login.microsoftonline.com/common/oauth2/*logout*"
+      ],
+      "js": ["src/loginScripts/microsoftOnlineLogin.js"]
+    },
+    {
+      "matches": ["https://elosp.ugent.be/*"],
+      "js": ["src/loginScripts/uforaLogin.js"]
+    }
+  ],
+  "icons": {
+    "48": "assets/icons/icon.png"
+  },
+  "update_url": "...update.xml",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/G+na9RLg3WX3uMrhyRA0UlhZ7ydhnGLwaWO4uStgo6734sdYr8VYsZpKYTx8M5k7R6Xmo5Uk0+R72FclgSsD+aUQB4hRbTCftOr5BLW/AWXP5ajNeyAKf2GkfZR7OUlHOAgsoOrUCp+zhBoQPHYbGQZY0KoHm1Z2oj6YyOVc3nC+xm4hZAZpR6W+NSi5UrKU2gPzCj358sy1BKbByJ21FRr6HE5iV8ZgUctWgg+iGDsPobwe6oNLrAMgnt4Rr5Q7SxZk+oHflMoKLqArSUcUQ1IuPEwR9Y7fhynnCUMEpeixpW72CH8pEAbd4392RSY/yOmU8NHc49jhzSVmvxt1QIDAQAB"
+}

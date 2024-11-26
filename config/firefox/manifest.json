@@ -2,35 +2,37 @@
   "manifest_version": 2,
   "author": "Edouard Goddeeris",
   "name": "Auto Login Extension",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "browser extension which automatically logs in UGent related login screens",
+  "applications": {
+    "gecko": {
+      "id": "ugentautologin@example.com",
+      "update_url": "...updates.json"
+    }
+  },
   "permissions": [
-    "tabs",
     "https://cloud.timeedit.net/*",
     "https://login.microsoftonline.com/*",
     "https://elosp.ugent.be/*"
   ],
-  "background": {
-    "scripts": ["background.js"]
-  },
   "content_scripts": [
     {
       "matches": ["https://cloud.timeedit.net/*"],
-      "js": ["loginScripts/timeEditLogin.js"]
+      "js": ["src/loginScripts/timeEditLogin.js"]
     },
     {
       "matches": ["https://login.microsoftonline.com/*"],
       "exclude_matches": [
         "https://login.microsoftonline.com/common/oauth2/*logout*"
       ],
-      "js": ["loginScripts/microsoftOnlineLogin.js"]
+      "js": ["src/loginScripts/microsoftOnlineLogin.js"]
     },
     {
       "matches": ["https://elosp.ugent.be/*"],
-      "js": ["loginScripts/uforaLogin.js"]
+      "js": ["src/loginScripts/uforaLogin.js"]
     }
   ],
   "icons": {
-    "48": "icons/icon.png"
+    "48": "assets/icons/icon.png"
   }
 }

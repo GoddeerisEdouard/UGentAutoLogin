@@ -1,0 +1,19 @@
+{
+  "name": "ugentautologin",
+  "version": "1.2.0",
+  "description": "browser extension which automatically logs in UGent related login screens",
+  "main": "build.js",
+  "scripts": {
+    "build:chrome": "node build.js chrome",
+    "build:firefox": "node build.js firefox"
+  },
+  "keywords": [
+    "autologin",
+    "ugent"
+  ],
+  "author": "Edouard Goddeeris",
+  "license": "GPLV3",
+  "dependencies": {
+    "ugentautologin": "file:"
+  }
+}
