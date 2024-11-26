@@ -6,7 +6,7 @@
   "description": "browser extension which automatically logs in UGent related login screens",
   "applications": {
     "gecko": {
-      "id": "ugentautologin@example.com",
+      "id": "ugent.autologin@example.com",
       "update_url": "https://goddeerisedouard.github.io/UGentAutoLogin/platform/firefox/updates.json"
     }
   },
