@@ -7,7 +7,7 @@
   "applications": {
     "gecko": {
       "id": "ugentautologin@example.com",
-      "update_url": "...updates.json"
+      "update_url": "https://goddeerisedouard.github.io/UGentAutoLogin/platform/firefox/updates.json"
     }
   },
   "permissions": [
