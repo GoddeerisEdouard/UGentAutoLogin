@@ -13,17 +13,29 @@ This happens in the background, the extension **will not** move your mouse.
 * [Manual exceptions](#manual-exceptions)
     + [Microsoft 2FA](#microsoft-2fa)
     + [no saved microsoft account](#no-saved-microsoft-account)
-* [Development](#development)
+* [Contributing](#contributing)
     + [Chrome](#chrome)
     + [Firefox](#firefox)
 * [Bugs or Feature Requests](#bugs-or-feature-requests)
 
 ## Installation guide
 ### Chrome
-<selfhosted .crx link here>
+1. Download the latest `ugent_autologin-X.X.X`**.zip** from [releases](https://github.com/GoddeerisEdouard/UGentAutoLogin/releases)
+2. Extract the downloaded zip
+3. In Chrome, browse to `chrome://extensions/` and make sure developer mode is enabled. (top right)  
+4. Click "Load unpacked" (top left) and select the extracted zip.  
+
+![chrome unpacked extension instruction](./assets/images/chrome_unpack_extension.png)
 
 ### Firefox
-<selhosted .xpi link here>
+1. Download the latest `ugent_autologin-X.X.X`**.xpi** from [releases](https://github.com/GoddeerisEdouard/UGentAutoLogin/releases)
+2. In Firefox, browse to `about:addons`, click the settings icon next to Manage extensions
+3. Click the "Install Add-on From File..." option & choose the downloaded `.xpi` file.
+
+Firefox will give you a pop-up to add the Add-on, just click "Add".  
+
+![firefox install instructions](./assets/images/firefox-install-addon-from-file.png)
+![firfox add add-on](./assets/images/firefox-add-add-on.png)
 
 ## Auto login screens
 The login portals you'd see when you're logged out.  
@@ -64,8 +76,9 @@ This means you don't have an account ready to be signed into.
 
 => log in to `https://login.microsoftonline.com/` with your UGent account & make sure to "remember" the account.
 
-## Development
-You can build & test the extension while developing by using the build script.
+## Contributing
+You can build & test the extension while developing by using the build script. 
+You will need [npm](https://github.com/npm/cli) for this.  
 
 ```sh
 npm run build:<platform>
